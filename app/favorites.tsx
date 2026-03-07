@@ -4,6 +4,7 @@ import React from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { BackButton } from '@/components/BackButton';
+import BannerAdViewComponent from '@/components/BannerAd';
 import { useFavorites } from '@/context/FavoritesContext';
 import { useTheme } from '@/context/ThemeContext';
 import { getSpanishTranslation } from '@/lib/utils';
@@ -49,6 +50,7 @@ export default function FavoritesScreen() {
           ))
         )}
       </ScrollView>
+      <BannerAdViewComponent />
       <BackButton bottom={24} onPress={() => router.back()} />
     </View>
   );

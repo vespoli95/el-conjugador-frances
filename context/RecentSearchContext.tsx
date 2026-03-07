@@ -1,3 +1,4 @@
+import { initAds } from '@/lib/adMob';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
 
@@ -21,6 +22,7 @@ export function RecentSearchProvider({ children }: { children: React.ReactNode }
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
 
   useEffect(() => {
+    initAds();
     void (async () => {
       const allKeys = await AsyncStorage.getAllKeys();
       const keys = allKeys.filter(k => k.startsWith(RECENT_PREFIX));

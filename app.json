@@ -2,7 +2,7 @@
   "expo": {
     "name": "el-conjugador-frances",
     "slug": "el-conjugador-frances",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "elconjugadorfrances",
@@ -47,7 +47,10 @@
       "reactCompiler": true
     },
     "extra": {
-      "router": {}
+      "router": {},
+      "eas": {
+        "projectId": "c89c5cfc-1c74-4cf1-98df-4b2b8f1e2cd1"
+      }
     }
   }
 }

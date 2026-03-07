@@ -6,6 +6,7 @@ import { ActivityIndicator, Pressable, StyleSheet, Text, View } from 'react-nati
 import { FrenchVerbData } from '@/assets/types/Conjugation';
 import { VerbName } from '@/assets/types/Search';
 import { BackButton } from '@/components/BackButton';
+import BannerAdViewComponent from '@/components/BannerAd';
 import ConjugationTable from '@/components/ConjugationTable';
 import Search from '@/components/Search';
 import { useFavorites } from '@/context/FavoritesContext';
@@ -72,6 +73,7 @@ export default function ConjugationScreen() {
           }))
         }
       />
+      <BannerAdViewComponent />
       <View style={styles.verbHeader}>
         <Text style={[styles.verbTitle, { color: isDark ? '#93c5fd' : '#1e3a8a' }]}>
           {verb?.toUpperCase()}

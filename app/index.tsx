@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Image, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import { VerbName } from '@/assets/types/Search';
+import BannerAdViewComponent from '@/components/BannerAd';
 import Search from '@/components/Search';
 import { useRecentSearches } from '@/context/RecentSearchContext';
 import { useTheme } from '@/context/ThemeContext';
@@ -49,6 +50,7 @@ export default function HomeScreen() {
           <FontAwesome name={isDark ? 'sun-o' : 'moon-o'} color={isDark ? '#facc15' : '#6b7280'} size={22} />
         </Pressable>
       </View>
+      <BannerAdViewComponent />
       <View style={styles.content}>
         <Search
           handleOnChangeText={handleOnChangeText}
@@ -111,6 +113,7 @@ export default function HomeScreen() {
           </View>
         </View>
       </View>
+      <BannerAdViewComponent />
     </View>
   );
 }
