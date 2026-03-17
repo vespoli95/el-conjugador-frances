@@ -1,10 +1,10 @@
 import React from "react";
 import {
+  ScrollView,
   StyleSheet,
   Text,
   TouchableHighlight,
   useWindowDimensions,
-  View,
 } from "react-native";
 
 type ConjTypeMenuProps = {
@@ -22,7 +22,11 @@ const ConjTypeMenu: React.FC<ConjTypeMenuProps> = ({
   const fontSize = width < 600 ? 12 : 16;
 
   return (
-    <View style={styles.container}>
+    <ScrollView
+      horizontal
+      showsHorizontalScrollIndicator={false}
+      contentContainerStyle={styles.container}
+    >
       {tenses?.map((tense) => (
         <TouchableHighlight
           key={tense}
@@ -35,14 +39,12 @@ const ConjTypeMenu: React.FC<ConjTypeMenuProps> = ({
               { fontSize },
               currentTense === tense ? styles.tabActive : styles.tabInactive,
             ]}
-            numberOfLines={1}
-            adjustsFontSizeToFit
           >
             {tense}
           </Text>
         </TouchableHighlight>
       ))}
-    </View>
+    </ScrollView>
   );
 };
 
@@ -50,6 +52,7 @@ export default ConjTypeMenu;
 
 const styles = StyleSheet.create({
   container: {
+    flexGrow: 1,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
@@ -59,12 +62,11 @@ const styles = StyleSheet.create({
     marginEnd: 4,
   },
   touchable: {
-    flex: 1,
     borderRadius: 6,
   },
   tab: {
     paddingVertical: 14,
-    paddingHorizontal: 4,
+    paddingHorizontal: 16,
     borderRadius: 6,
     textAlign: "center",
     fontWeight: "bold",
