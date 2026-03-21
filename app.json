@@ -30,6 +30,15 @@
     "plugins": [
       "expo-router",
       [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511",
+          "optimizeInitialization": true,
+          "optimizeAdLoading": true
+        }
+      ],
+      [
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
@@ -48,6 +57,9 @@
     },
     "extra": {
       "router": {},
+      "googleMobileAds": {
+        "usingTestAppIds": true
+      },
       "eas": {
         "projectId": "c89c5cfc-1c74-4cf1-98df-4b2b8f1e2cd1"
       }

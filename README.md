@@ -25,6 +25,14 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
+## Google Mobile Ads
+
+This app uses `react-native-google-mobile-ads`.
+
+The Expo config currently includes Google's official test app IDs so Android and iOS builds do not crash on startup when AdMob is enabled.
+
+Before shipping a store build, replace those test IDs in `app.json` with your real AdMob app IDs.
+
 ## Get a fresh project
 
 When you're ready, run:
